@@ -1,0 +1,83 @@
+body 
+{
+	background-image: url('../img/bg_body.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+section
+{
+	perspective: 1400px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.card-container 
+{
+	position: relative;
+	transform-style: preserve-3d;
+}
+
+.card-container div
+{
+	max-width: 335px;
+	transition: 2.5s;
+}
+
+.front-face
+{
+	z-index: 100;
+	position: absolute;
+	backface-visibility: hidden;
+}
+
+.frontCard
+{
+	transform: rotateY(360deg);
+}
+
+.front-reverse {
+	transform: rotateY(180deg);
+}
+
+.back-face
+{
+	z-index: 50;
+	transform: rotateY(-180deg);
+	backface-visibility: hidden;
+}
+
+.backCard
+{
+	transform: rotateY(180deg);
+}
+
+.back-reverse {
+	transform: rotateY(0deg);
+}
+
+img.card-img
+{
+	width: 100%;
+}
+
+button {
+	border:none;
+	outline: none;
+	background-color: #630;
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1em;
+	margin: 8px 0;
+	padding: 16px 32px;
+
+}
+
+footer
+{
+	background-color: rgba(255,255,255,.2);
+	text-align:center;
+	color: #630;
+}

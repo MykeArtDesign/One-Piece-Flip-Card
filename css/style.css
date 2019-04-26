@@ -1,8 +1,17 @@
+/*  GLOBAL  */
+
+html
+{
+	box-sizing: border-box;
+}
+
 body 
 {
 	background-image: url('../img/bg_body.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
+	margin: 0;
+	padding: 0;
 	
 }
 
@@ -12,8 +21,11 @@ section
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
+	margin: 0;
+	padding: 0;
 }
 
+/*  Contenant pour les Cartes  */
 .card-container 
 {
 	position: relative;
@@ -22,22 +34,24 @@ section
 
 .card-container div
 {
-	max-width: 335px;
+	max-width: 330px;
 	transition: 2.5s;
 }
 
+/* Face Avant */
 .front-face
 {
 	z-index: 100;
 	position: absolute;
 	backface-visibility: hidden;
 }
-
+/* Face Avant Animation */
 .frontCard
 {
 	transform: rotateY(360deg);
 }
 
+/* Face Arrière */
 .front-reverse {
 	transform: rotateY(180deg);
 }
@@ -48,7 +62,7 @@ section
 	transform: rotateY(-180deg);
 	backface-visibility: hidden;
 }
-
+/* Face Arrière Animation*/
 .backCard
 {
 	transform: rotateY(180deg);
@@ -57,27 +71,63 @@ section
 .back-reverse {
 	transform: rotateY(0deg);
 }
-
+/* Image des Cartes */
 img.card-img
 {
 	width: 100%;
 }
 
-button {
+/* Bouton plus */
+.plus
+{
 	border:none;
+	border-radius: 45%;
 	outline: none;
-	background-color: #630;
+	background-color: rgba(204, 204, 204, .5);
+	color: #FFF;
+	font-weight: bold;
+	font-size: 1em;
+	margin: 4px 0;
+	padding: 8px 16px;
+}
+
+.plus:hover
+{
+	background-color: rgba(102, 51, 0, .5);
+}
+
+/* Boutons Reverse */
+.sect button 
+{
+	border:none;
+	border-radius: 16px;
+	outline: none;
+	background-color: rgba(102, 51, 0, .8);
 	color: #FFF;
 	font-weight: bold;
 	font-size: 1em;
 	margin: 8px 0;
-	padding: 16px 32px;
+	padding: 8px 32px;
 
 }
 
+.sect
+{
+	transition: 1s;
+}
+
+/* Cacher la section */
+.hide
+{
+	opacity: 0;
+}
+
+/* Footer Copyright */
 footer
 {
-	background-color: rgba(255,255,255,.2);
+	background-color: rgba(255,255,255,.1);
 	text-align:center;
 	color: #630;
+	position: absolute;
+	bottom: 10px;
 }

@@ -2,132 +2,159 @@
 
 html
 {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header
+{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+header>a
+{
+  text-decoration: none;
+  color: rgba(102, 51, 0, .8);
+  align-self: flex-start;
+  padding: .5rem;
+  margin: .5rem;
+  background-color: rgba(255, 234, 167, .5);
+  border-radius: .3rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+header .logo
+{
+  width: 20%;
 }
 
 body 
 {
-	background-image: url('../img/bg_body.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	margin: 0;
-	padding: 0;
-	
+  background-image: url('../img/bg_body.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
 }
-
-section
+section.container
 {
-	perspective: 1400px;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	margin: 0;
-	padding: 0;
+  perspective: 87.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; 
+  
 }
-
 /*  Contenant pour les Cartes  */
 .card-container 
 {
-	position: relative;
-	transform-style: preserve-3d;
+  position: relative;
+  transform-style: preserve-3d;
 }
 
 .card-container div
 {
-	max-width: 330px;
-	transition: 2.5s;
+  max-width: 18.75rem;
+  transition: 2.5s;
 }
 
 /* Face Avant */
 .front-face
 {
-	z-index: 100;
-	position: absolute;
-	backface-visibility: hidden;
+  z-index: 100;
+  position: absolute;
+  backface-visibility: hidden;
 }
 /* Face Avant Animation */
 .frontCard
 {
-	transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }
 
 /* Face Arrière */
 .front-reverse {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .back-face
 {
-	z-index: 50;
-	transform: rotateY(-180deg);
-	backface-visibility: hidden;
+  z-index: 50;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
 }
 /* Face Arrière Animation*/
 .backCard
 {
-	transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .back-reverse {
-	transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 /* Image des Cartes */
 img.card-img
 {
-	width: 100%;
+  width: 100%;
 }
 
 /* Bouton plus */
 .plus
 {
-	border:none;
-	border-radius: 45%;
-	outline: none;
-	background-color: rgba(204, 204, 204, .5);
-	color: #FFF;
-	font-weight: bold;
-	font-size: 1em;
-	margin: 4px 0;
-	padding: 8px 16px;
+  border:none;
+  border-radius: 50%;
+  outline: none;
+  background-color: rgba(204, 204, 204, .5);
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: .5rem .75rem;
+  z-index: 5;
 }
 
 .plus:hover
 {
-	background-color: rgba(102, 51, 0, .5);
+  background-color: rgba(102, 51, 0, .5);
 }
 
 /* Boutons Reverse */
 .sect button 
 {
-	border:none;
-	border-radius: 16px;
-	outline: none;
-	background-color: rgba(102, 51, 0, .8);
-	color: #FFF;
-	font-weight: bold;
-	font-size: 1em;
-	margin: 8px 0;
-	padding: 8px 32px;
+  border:none;
+  border-radius: 1rem;
+  outline: none;
+  background-color: rgba(102, 51, 0, .8);
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: .5rem 7rem;
+  padding: .5rem 2rem;
 
 }
 
 .sect
 {
-	transition: 1s;
+  transition: 1s;
+  position: absolute;
+  top: 7rem;
+  z-index: 1;
 }
 
 /* Cacher la section */
 .hide
 {
-	opacity: 0;
+  display: none;
 }
 
 /* Footer Copyright */
 footer
 {
-	background-color: rgba(255,255,255,.1);
-	text-align:center;
-	color: #630;
-	position: absolute;
-	bottom: 10px;
+  background-color: rgba(255,255,255,.1);
+  text-align:center;
+  color: #630;
+  position: absolute;
+  bottom: .625rem;
 }
